@@ -25,14 +25,78 @@ body {
 }
 
 
-/* ------------  Header  ------------ */
 
+/* ------------ For Large Screens ------------ */
+@media only screen and (min-width: 851px) {
+  body {
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: 
+      "header header header header header header header header header header header header"
+      "header header header header header header header header header header header header"
+      ". menu main main main main main main main main . ."
+      ". menu main main main main main main main main . ."
+      ". menu main main main main main main main main . ."
+      ". menu main main main main main main main main . ."
+      ". . main main main main main main main main . ."
+      ". . main main main main main main main main . ."
+      ". . main main main main main main main main . ."
+      ". . main main main main main main main main . ."
+      ". . footer footer footer footer footer footer footer footer . ."
+      ". . footer footer footer footer footer footer footer footer . .";
+  }
+}
+
+
+/* ------------ For Small Screens ------------ */
+@media only screen and (max-width: 850px) {
+
+}
+
+
+
+/* ------------  Header  ------------ */
+header {
+  /* Grid Things */
+  grid-area: header;
+  justify-self: stretch;
+
+  /* Everything Else */
+  background-color: #777;
+  padding: 2rem;
+  text-align: center;
+}
+header .header-div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+header .header-div img {
+  padding: 1rem
+}
 
 /* ------------  Nav  ------------ */
+nav {
+  grid-area: menu;
+  background-color: #999;
+  padding: 2rem;
 
+}
 
 /* ------------  Body  ------------ */
+main {
+  grid-area: main;
+  background-color: #bbb;
+  padding: 2rem;
 
+}
 
 /* ------------  Footer  ------------ */
+footer {
+  grid-area: footer;
+  background-color: #999;
+  padding: 2rem;
 
+}
