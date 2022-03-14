@@ -12,12 +12,27 @@ Web Colors:
 
 */
 
+
+/* The Defaults */
+
 * {box-sizing: border-box;}
 
-
-body {      /* The Defaults */
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
     margin: 0;
 }
+
+
+/* ------------  Header  ------------ */
+
+
+/* ------------  Nav  ------------ */
+
+
+/* ------------  Body  ------------ */
+
+
+/* ------------  Footer  ------------ */
+
