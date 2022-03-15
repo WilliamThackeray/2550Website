@@ -135,8 +135,15 @@ main {
   /* Everything Else */
   color: white;
 }
-main img {
+.hide {
+  display: none;
+}
+main #homeContent img {
   float: right;
+  margin: 0.75rem;
+}
+main #streamingContent img {
+  float: left;
   margin: 0.75rem;
 }
 
