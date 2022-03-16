@@ -96,33 +96,37 @@ nav {
   padding: 2rem;
   position: fixed;
   margin: 16rem 6.25% 0 3.125%;
-  width: 12.5%;
+  width: 14%;
 
   /* Everything Else */
   border-radius: 1.3rem;
 }
-nav a {
+nav p {
   font-size: 1.1rem;
   text-decoration: none;
   color: white;
+  padding: .2rem;
+  border-radius: 0.2rem;
 }
-nav a:hover {
+nav p:hover {
   color: #FF17C6;
+  background-color: white;
+  cursor: pointer;
 }
 nav #home:hover { /* Removes hover property for the current page */
-  color: white;
+  color: #FF17C6;
 }
 nav #streaming:hover { /* Removes hover property for the current page */
-  color: white;
+  color: #FF17C6;
 }
 nav #videos:hover { /* Removes hover property for the current page */
-  color: white;
+  color: #FF17C6;
 }
 nav #community:hover { /* Removes hover property for the current page */
-  color: white;
+  color: #FF17C6;
 }
 nav #branding:hover { /* Removes hover property for the current page */
-  color: white;
+  color: #FF17C6;
 }
 
 /* ------------  Body  ------------ */
