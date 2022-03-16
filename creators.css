@@ -146,6 +146,18 @@ main #streamingContent img {
   float: left;
   margin: 0.75rem;
 }
+main #videosContent img {
+  float: right;
+  margin: 0.75rem;
+}
+main #communityContent img {
+  float: left;
+  margin: 0.75rem;
+}
+main #brandingContent img {
+  float: right;
+  margin: 0.75rem;
+}
 
 /* ------------  Footer  ------------ */
 footer {
