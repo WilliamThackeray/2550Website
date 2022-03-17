@@ -96,7 +96,7 @@ nav {
   padding: 2rem;
   position: fixed;
   margin: 16rem 6.25% 0 3.125%;
-  width: 14%;
+  width: 12rem;
 
   /* Everything Else */
   border-radius: 1.3rem;
@@ -135,6 +135,7 @@ main {
   grid-area: main;
   background-color: #222;
   padding: 2rem;
+  margin-left: 3.5rem;
 
   /* Everything Else */
   color: white;
@@ -142,25 +143,30 @@ main {
 .hide {
   display: none;
 }
-main #homeContent img {
+main #homeContent figure {
   float: right;
   margin: 0.75rem;
+  text-align: center;
 }
-main #streamingContent img {
+main #streamingContent figure {
   float: left;
   margin: 0.75rem;
+  text-align: center;
 }
-main #videosContent img {
+main #videosContent figure {
   float: right;
   margin: 0.75rem;
+  text-align: center;
 }
-main #communityContent img {
+main #communityContent figure {
   float: left;
   margin: 0.75rem;
+  text-align: center;
 }
-main #brandingContent img {
+main #brandingContent figure {
   float: right;
   margin: 0.75rem;
+  text-align: center;
 }
 
 /* ------------  Footer  ------------ */
@@ -173,4 +179,6 @@ footer {
   /* Everything Else */
   background-color: #8328FA;
   background-image: linear-gradient(#222, #8328FA);
+  color: white;
+  text-align: center;
 }
