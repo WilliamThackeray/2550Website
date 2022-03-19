@@ -224,6 +224,9 @@ main #thumbnails img {
   max-width: 100%;
   height: auto;
 }
+/* main #communityContent iframe {
+  padding: 1rem;
+} */
 
 /* ------------  Footer  ------------ */
 footer {
