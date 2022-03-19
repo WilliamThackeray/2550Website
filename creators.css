@@ -3,14 +3,19 @@ This is the CSS file for the Creators website.
 
 
 Web Colors: 
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Pinky  #FF17C6
+2. Pinky-Purple #B719E3
+3. Purple #8328FA
+4. Dark Blue #2919E3
+5. Blue #1C56FB
+6. Dark Gray #222
+7. Black #000
+8. Light Gray #999
+9. White #fff
 
 
 */
+
 
 
 /* The Defaults */
@@ -29,7 +34,7 @@ body {
 /* ------------ For Large Screens ------------ */
 @media only screen and (min-width: 771px) {
   body {
-    background-color: aquamarine;
+    background-color: #222;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -44,8 +49,8 @@ body {
       ". . main main main main main main main main . ."
       ". . main main main main main main main main . ."
       ". . main main main main main main main main . ."
-      ". . footer footer footer footer footer footer footer footer . ."
-      ". . footer footer footer footer footer footer footer footer . .";
+      ". . main main main main main main main main . ."
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
   }
   nav {
     /* Grid Things */
@@ -150,14 +155,23 @@ header {
   justify-self: stretch;
 
   /* Everything Else */
-  background-color: #777;
+  background-color: #8328FA;
+  background-image: linear-gradient(#8328FA, #222);
+  color: white;
+
   padding: 2rem;
   text-align: center;
+}
+header #pageTitle {
+  font-size: 3rem;
 }
 header .header-div {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+header .header-div img {
+  padding: 1rem
 }
 
 /* ------------  Nav  ------------ */
@@ -223,8 +237,14 @@ main #brandingContent figure {
 
 /* ------------  Footer  ------------ */
 footer {
+  /* Grid Things */
   grid-area: footer;
   background-color: #999;
   padding: 2rem;
 
+  /* Everything Else */
+  background-color: #8328FA;
+  background-image: linear-gradient(#222, #8328FA);
+  color: white;
+  text-align: center;
 }
