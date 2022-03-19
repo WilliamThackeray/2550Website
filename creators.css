@@ -3,19 +3,14 @@ This is the CSS file for the Creators website.
 
 
 Web Colors: 
-1. Pinky  #FF17C6
-2. Pinky-Purple #B719E3
-3. Purple #8328FA
-4. Dark Blue #2919E3
-5. Blue #1C56FB
-6. Dark Gray #222
-7. Black #000
-8. Light Gray #999
-9. White #fff
+1. 
+2. 
+3. 
+4. 
+5. 
 
 
 */
-
 
 
 /* The Defaults */
@@ -34,7 +29,7 @@ body {
 /* ------------ For Large Screens ------------ */
 @media only screen and (min-width: 851px) {
   body {
-    background-color: #222;
+    background-color: aquamarine;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -49,9 +44,8 @@ body {
       ". . main main main main main main main main . ."
       ". . main main main main main main main main . ."
       ". . main main main main main main main main . ."
-      ". . main main main main main main main main . ."
-      "footer footer footer footer footer footer footer footer footer footer footer footer";
-
+      ". . footer footer footer footer footer footer footer footer . ."
+      ". . footer footer footer footer footer footer footer footer . .";
   }
 }
 
@@ -70,108 +64,36 @@ header {
   justify-self: stretch;
 
   /* Everything Else */
-  background-color: #8328FA;
-  background-image: linear-gradient(#8328FA, #222);
-  color: white;
-
+  background-color: #777;
   padding: 2rem;
   text-align: center;
-}
-header #pageTitle {
-  font-size: 3rem;
 }
 header .header-div {
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
-header .header-div img {
-  padding: 1rem
-}
 
 /* ------------  Nav  ------------ */
 nav {
-  /* Grid Things */
   grid-area: menu;
-  background-color: #8328FA;
+  background-color: #999;
   padding: 2rem;
-  position: fixed;
-  margin: 16rem 6.25% 0 3.125%;
-  width: 11rem;
 
-  /* Everything Else */
-  border-radius: 1.3rem;
-}
-nav p {
-  font-size: 1.1rem;
-  text-decoration: none;
-  color: white;
-  padding: .2rem;
-  border-radius: 0.2rem;
-}
-nav p:hover {
-  color: #FF17C6;
-  background-color: white;
-  cursor: pointer;
-}
-nav #home:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
-}
-nav #streaming:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
-}
-nav #videos:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
-}
-nav #community:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
-}
-nav #branding:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
 }
 
 /* ------------  Body  ------------ */
 main {
-  /* Grid Things */
   grid-area: main;
-  background-color: #222;
+  background-color: #bbb;
   padding: 2rem;
 
-  /* Everything Else */
-  color: white;
-}
-.hide {
-  display: none;
-}
-main #homeContent img {
-  float: right;
-  margin: 0.75rem;
-}
-main #streamingContent img {
-  float: left;
-  margin: 0.75rem;
-}
-main #videosContent img {
-  float: right;
-  margin: 0.75rem;
-}
-main #communityContent img {
-  float: left;
-  margin: 0.75rem;
-}
-main #brandingContent img {
-  float: right;
-  margin: 0.75rem;
 }
 
 /* ------------  Footer  ------------ */
 footer {
-  /* Grid Things */
   grid-area: footer;
   background-color: #999;
   padding: 2rem;
 
-  /* Everything Else */
-  background-color: #8328FA;
-  background-image: linear-gradient(#222, #8328FA);
 }
