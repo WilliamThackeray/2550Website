@@ -37,19 +37,15 @@ body {
     background-color: #222;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-template-areas: 
       "header header header header header header header header header header header header"
       "header header header header header header header header header header header header"
-      ". menu main main main main main main main main . ."
-      ". menu main main main main main main main main . ."
-      ". menu main main main main main main main main . ."
-      ". menu main main main main main main main main . ."
-      ". . main main main main main main main main . ."
-      ". . main main main main main main main main . ."
-      ". . main main main main main main main main . ."
-      ". . main main main main main main main main . ."
-      ". . main main main main main main main main . ."
+      ". menu main main main main main main main main main main"
+      ". menu main main main main main main main main main main"
+      ". menu main main main main main main main main main main"
+      ". menu main main main main main main main main main main"
+      ". . main main main main main main main main main main"
       "footer footer footer footer footer footer footer footer footer footer footer footer";
   }
   nav {
@@ -95,15 +91,11 @@ body {
     background-color: #222;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-template-areas: 
       "header header header header header header header header header header header header"
       "header header header header header header header header header header header header"
       ". menu menu menu menu menu menu menu menu menu . ."
-      ". main main main main main main main main main main ."
-      ". main main main main main main main main main main ."
-      ". main main main main main main main main main main ."
-      ". main main main main main main main main main main ."
       ". main main main main main main main main main main ."
       ". main main main main main main main main main main ."
       ". main main main main main main main main main main ."
@@ -188,27 +180,7 @@ header .fa-solid {
 
 
 
-nav #home:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
-  cursor: pointer;
-  background-color: white;
-}
-nav #streaming:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
-  cursor: pointer;
-  background-color: white;
-}
-nav #videos:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
-  cursor: pointer;
-  background-color: white;
-}
-nav #community:hover { /* Removes hover property for the current page */
-  color: #FF17C6;
-  cursor: pointer;
-  background-color: white;
-}
-nav #branding:hover { /* Removes hover property for the current page */
+nav #home:hover, nav #streaming:hover, nav #videos:hover, nav #community:hover, nav #branding:hover { /* Removes hover property for the current page */
   color: #FF17C6;
   cursor: pointer;
   background-color: white;
@@ -223,11 +195,13 @@ nav #branding:hover { /* Removes hover property for the current page */
 main #homeContent figure .rightFig, main #videosContent figure .rightFig, main #brandingContent figure .rightFig {
   float: right;
   /* margin: 0.75rem; */
+  padding: 1rem;
   text-align: center;
 }
 main #streamingContent figure .leftFig, main #communityContent figure .leftFig {
   float: left;
   /* margin: 0.75rem; */
+  padding: 1rem;
   text-align: center;
 }
 main #homeContent figure img, main #videosContent figure img, main #brandingContent figure img, main #streamingContent figure img, main #communityContent figure img { 
@@ -235,9 +209,21 @@ main #homeContent figure img, main #videosContent figure img, main #brandingCont
   height: auto;
 }
 main #homeContent div, main #videosContent div, main #brandingContent div, main #streamingContent div, main #communityContent div {
-  width: 40%;
+  width: 60%;
 }
-
+main img {
+  border: 2px #8328FA solid;
+  border-radius: 5px;
+}
+main #thumbnails {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+main #thumbnails img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* ------------  Footer  ------------ */
 footer {
