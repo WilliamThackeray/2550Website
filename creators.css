@@ -27,7 +27,7 @@ body {
 
 
 /* ------------ For Large Screens ------------ */
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 771px) {
   body {
     background-color: aquamarine;
     display: grid;
@@ -47,12 +47,98 @@ body {
       ". . footer footer footer footer footer footer footer footer . ."
       ". . footer footer footer footer footer footer footer footer . .";
   }
+  nav {
+    /* Grid Things */
+    grid-area: menu;
+    background-color: #8328FA;
+    padding: 1rem;
+    position: fixed;
+    margin: 16rem 6.25% 0 3.125%;
+    width: 11rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    /* Everything Else */
+    border-radius: 1.3rem;
+  }
+  nav p {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+    padding: .3rem;
+    border-radius: 0.2rem;
+  }
+  main {
+    /* Grid Things */
+    grid-area: main;
+    background-color: #222;
+    padding: 2rem;
+    margin-left: 3.5rem;
+  
+    /* Everything Else */
+    color: white;
+  }
 }
 
 
 /* ------------ For Small Screens ------------ */
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 770px) {
+  body {
+    background-color: #222;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: 
+      "header header header header header header header header header header header header"
+      "header header header header header header header header header header header header"
+      ". menu menu menu menu menu menu menu menu menu . ."
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+  nav {
+    /* Grid Things */
+    grid-area: menu;
+    background-color: #8328FA;
 
+    /* Everything Else */
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+    margin: 0;
+    padding: 0;
+  }
+  nav p {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+    /* padding: .6rem; */
+    margin: 0;
+    border-radius: 0.2rem;
+  }
+  main {
+    /* Grid Things */
+    grid-area: main;
+    background-color: #222;
+    padding: 1rem;
+    margin: 0;
+  
+    /* Everything Else */
+    color: white;
+  }
 }
 
 
@@ -75,19 +161,64 @@ header .header-div {
 }
 
 /* ------------  Nav  ------------ */
-nav {
-  grid-area: menu;
-  background-color: #999;
-  padding: 2rem;
 
+
+
+nav #home:hover { /* Removes hover property for the current page */
+  color: #FF17C6;
+  cursor: pointer;
+  background-color: white;
+}
+nav #streaming:hover { /* Removes hover property for the current page */
+  color: #FF17C6;
+  cursor: pointer;
+  background-color: white;
+}
+nav #videos:hover { /* Removes hover property for the current page */
+  color: #FF17C6;
+  cursor: pointer;
+  background-color: white;
+}
+nav #community:hover { /* Removes hover property for the current page */
+  color: #FF17C6;
+  cursor: pointer;
+  background-color: white;
+}
+nav #branding:hover { /* Removes hover property for the current page */
+  color: #FF17C6;
+  cursor: pointer;
+  background-color: white;
 }
 
 /* ------------  Body  ------------ */
-main {
-  grid-area: main;
-  background-color: #bbb;
-  padding: 2rem;
 
+.hide {
+  display: none;
+}
+main #homeContent figure {
+  float: right;
+  margin: 0.75rem;
+  text-align: center;
+}
+main #streamingContent figure {
+  float: left;
+  margin: 0.75rem;
+  text-align: center;
+}
+main #videosContent figure {
+  float: right;
+  margin: 0.75rem;
+  text-align: center;
+}
+main #communityContent figure {
+  float: left;
+  margin: 0.75rem;
+  text-align: center;
+}
+main #brandingContent figure {
+  float: right;
+  margin: 0.75rem;
+  text-align: center;
 }
 
 /* ------------  Footer  ------------ */
