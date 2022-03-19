@@ -118,7 +118,7 @@ body {
     /* Everything Else */
     border-radius: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     
@@ -167,11 +167,21 @@ header #pageTitle {
 }
 header .header-div {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 header .header-div img {
   padding: 1rem
+}
+header .header-div svg {
+  width: 100px;
+  height: auto;
+  margin: 0;
+  padding: 1rem;
+  color: white;
+}
+header .fa-solid {
+  color: white;
 }
 
 /* ------------  Nav  ------------ */
@@ -209,31 +219,25 @@ nav #branding:hover { /* Removes hover property for the current page */
 .hide {
   display: none;
 }
-main #homeContent figure {
+
+main #homeContent figure .rightFig, main #videosContent figure .rightFig, main #brandingContent figure .rightFig {
   float: right;
-  margin: 0.75rem;
+  /* margin: 0.75rem; */
   text-align: center;
 }
-main #streamingContent figure {
+main #streamingContent figure .leftFig, main #communityContent figure .leftFig {
   float: left;
-  margin: 0.75rem;
+  /* margin: 0.75rem; */
   text-align: center;
 }
-main #videosContent figure {
-  float: right;
-  margin: 0.75rem;
-  text-align: center;
+main #homeContent figure img, main #videosContent figure img, main #brandingContent figure img, main #streamingContent figure img, main #communityContent figure img { 
+  max-width: 100%;
+  height: auto;
 }
-main #communityContent figure {
-  float: left;
-  margin: 0.75rem;
-  text-align: center;
+main #homeContent div, main #videosContent div, main #brandingContent div, main #streamingContent div, main #communityContent div {
+  width: 40%;
 }
-main #brandingContent figure {
-  float: right;
-  margin: 0.75rem;
-  text-align: center;
-}
+
 
 /* ------------  Footer  ------------ */
 footer {
