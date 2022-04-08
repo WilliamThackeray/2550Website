@@ -1,0 +1,83 @@
+/* 
+Main Color Scheme changed to Yellow, Black, Red,  and Cyan.
+Added text shadow to title and subtitle to make it more readable.
+Menu moved to a more traditional Nav placed horizontally under the header.
+Font changed to Lucida Sans.
+Lighter theme overall.
+
+
+
+
+*/
+
+/* Basic Color Changes */
+:root {
+  --purple-color: #555;
+  --font-color: #019CE0;
+  --bg-color: #E0D900;
+  --highlight-color: #E0190B;
+}
+
+/* Font Changes */
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Title and Footer Shadows */
+header #pageTitle {
+  text-shadow: 2px 1px #555;
+}
+header {
+  text-shadow: 1px 1px 1px #555;
+}
+footer {
+  text-shadow: 1px 1px #555;
+}
+
+/* ----->  Nav/Menu Changes <----- */
+
+
+        /* Small Screens */
+@media only screen and (max-width: 770px) {
+
+}
+        /* Large Screens */
+@media only screen and (min-width: 771px) {
+  body {
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+      "header header header header header header header header header header header header"
+      "menu menu menu menu menu menu menu menu menu menu menu menu"
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+  nav#mainMenu div {
+    display: flex;
+  }
+  nav#mainMenu div > p {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  nav#mainMenu {
+    border-radius: 0;
+    /* background-image: linear-gradient(var(--bg-color), #accedd, #accedd, var(--bg-color)); */
+    background-color: #accedd;
+    border: 10px solid #555;
+  }
+}
+
+
+header {
+  background-image: linear-gradient(#DDD, var(--bg-color));
+}
+
+nav #home:hover, nav #streaming:hover, nav #videos:hover, nav #community:hover, nav #branding:hover, nav #toggle:hover { /* Removes hover property for the current page */
+  color: var(--font-color);
+  cursor: pointer;
+  background-color: #accedd;
+  border: 2px dotted #555;
+}
