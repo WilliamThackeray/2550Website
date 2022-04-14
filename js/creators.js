@@ -7,46 +7,41 @@ let pages = document.getElementsByClassName('menuItem');
 let contents = document.getElementsByTagName('section');
 
 // to show the home content
-pages[0].addEventListener('click', function(){
-  for (let i = 0; i < pages.length; i++) {
-    contents[i].className = 'hide';
-  }
-  contents[0].className = '';
+$('.home').click(function(){
+  $('.content').hide();
+  $('#homeContent').show();
 });
+
 // to show the Live Streaming content
-pages[1].addEventListener('click', function(){
-  for (let i = 0; i < pages.length; i++) {
-    contents[i].className = 'hide';
-  }
-  contents[1].className = '';
+$('.streaming').click(function(){
+  $('.content').hide();
+  $('#streamingContent').show();
 });
+
 // to show the Videos content
-pages[2].addEventListener('click', function(){
-  for (let i = 0; i < pages.length; i++) {
-    contents[i].className = 'hide';
-  }
-  contents[2].className = '';
+$('.videos').click(function(){
+  $('.content').hide();
+  $('#videosContent').show();
 });
+
 // to show the community content
-pages[3].addEventListener('click', function(){
-  for (let i = 0; i < pages.length; i++) {
-    contents[i].className = 'hide';
-  }
-  contents[3].className = '';
+$('.community').click(function(){
+  $('.content').hide();
+  $('#communityContent').show();
 });
+
 // to show the branding content
-pages[4].addEventListener('click', function(){
-  for (let i = 0; i < pages.length; i++) {
-    contents[i].className = 'hide';
-  }
-  contents[4].className = '';
+$('.branding').click(function(){
+  $('.content').hide();
+  $('#brandingContent').show();
 });
-pages[5].addEventListener('click', function(){
-  for (let i = 0; i < pages.length; i++) {
-    contents[i].className = 'hide';
-  }
-  contents[5].className = '';
+
+// to show the visitor log
+$('.visitor-log').click(function(){
+  $('.content').hide();
+  $('#log-visit').show();
 });
+
 
 // Toggle Theme Button functionality here
 let themeSheet = '<link id="theme" rel="stylesheet" href="theme.css">'
@@ -57,11 +52,9 @@ $("#toggle").click(function(){
   console.log("Clicked");
   // check if theme.css is in head
   if (bool) {
-    console.log("sheet is in html");
     $("#theme").remove();
     bool = false;
   } else {
-    console.log("sheet is not in html");
     $("#baseStyling").after(themeSheet);
     bool = true;
   }

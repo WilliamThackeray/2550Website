@@ -16,6 +16,7 @@ Lighter theme overall.
   --font-color: #019CE0;
   --bg-color: #E0D900;
   --highlight-color: #E0190B;
+  --form-requred: #accedd;
 }
 
 /* Font Changes */
@@ -39,7 +40,7 @@ footer {
 
         /* Small Screens */
 @media only screen and (max-width: 770px) {
-
+  
 }
         /* Large Screens */
 @media only screen and (min-width: 771px) {

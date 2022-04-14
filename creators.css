@@ -149,7 +149,28 @@ body {
     color: var(--font-color);
   }
 }
-
+@media only screen and (min-width: 1090px) {
+  main #visitor-form {
+    display: flex;
+    flex-direction: column;
+  }
+  main #form-div, main #form-div2, main #form-div3 {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+  }
+}
+@media only screen and (max-width: 1089px) {
+  main #visitor-form {
+    display: flex;
+    flex-direction: column;
+  }
+  main #form-div, main #form-div2, main #form-div3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+}
 
 
 /* ------------  Header  ------------ */
@@ -192,7 +213,7 @@ header .fa-solid {
 /* ------------  Nav  ------------ */
 
 
-nav #home:hover, nav #streaming:hover, nav #videos:hover, nav #community:hover, nav #branding:hover, nav #toggle:hover, #visitor-log:hover { /* Removes hover property for the current page */
+nav .home:hover, nav .streaming:hover, nav .videos:hover, nav .community:hover, nav .branding:hover, nav #toggle:hover, .visitor-log:hover { /* Removes hover property for the current page */
   color: var(--highlight-color);
   cursor: pointer;
   background-color: white;
@@ -238,15 +259,7 @@ main #thumbnails img {
 }
 
 /* Form CSS */
-main #visitor-form {
-  display: flex;
-  flex-direction: column;
-}
-main #form-div, main #form-div2, main #form-div3 {
-  display: flex;
-  flex-direction: row;
-  margin: 0.5rem;
-}
+
 main #message{
   display: flex;
   order: 5;
