@@ -41,6 +41,12 @@ pages[4].addEventListener('click', function(){
   }
   contents[4].className = '';
 });
+pages[5].addEventListener('click', function(){
+  for (let i = 0; i < pages.length; i++) {
+    contents[i].className = 'hide';
+  }
+  contents[5].className = '';
+});
 
 // Toggle Theme Button functionality here
 let themeSheet = '<link id="theme" rel="stylesheet" href="theme.css">'

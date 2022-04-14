@@ -52,6 +52,7 @@ I personally super enjoyed this project. I loved getting more comfortable with C
       <p id="videos" class="menuItem">Videos</p>
       <p id="community" class="menuItem">Community</p>
       <p id="branding" class="menuItem">Branding</p>
+      <p id="visitor-log" class="menuItem">Visitor Log</p>
       <p id="toggle" >Toggle Theme</p>
     </div>
   </nav>
@@ -120,11 +121,49 @@ I personally super enjoyed this project. I loved getting more comfortable with C
 
     <!-- Section for the Form -->
     <section id="log-visit" class="">
-      
+      <h1>Visitor Form</h1>
+
+      <form id="visitor-form" novalidate>
+        <div id="form-div">
+        <fieldset id="basic"> <!-- Basic Info -->
+          <legend>Basic User Information</legend>
+            <label>First Name<input type="text" name="fname" required></label>
+            <label>Last Name<input type="text" name="lname" required></label>
+            <label>Address<input type="text" name="address"></label>
+            <label>City<input type="text" name="city"></label>
+            <label>State<input type="text" name="state"></label>
+            <label>Zip<input type="number" name="zip"></label>
+        </fieldset>
+
+        <fieldset id="contact"> <!-- Contact Info -->
+          <legend>Contact Information</legend>
+            <label>Phone<input type="tel" name="phone" placeholder="000-123-4567"></label>
+            <label>Email<input type="email" name="email"></label>
+        </fieldset>
+        </div>
+
+        <div id="form-div2">
+        <fieldset id="discover"> <!-- Discovery Info-->
+          <legend>How Did You Find This Website?</legend>
+            <label><input type="checkbox" value="chosen" name="">Telegram</label>
+            <label><input type="checkbox" value="chosen" name="">Local Gossip</label>
+            <label><input type="checkbox" value="chosen" name="">I'm the Grader</label>
+        </fieldset>
+        <fieldset id="comments"> <!-- Comments -->
+          <legend>Comments</legend>
+            <textarea placeholder="Comments"></textarea>
+        </fieldset>
+        </div>
+
+        <div id="form-div3">
+          <input id="submit" type="submit" value="Log Visit">
+        </div>
+      </form>
     </section>
 
     <!-- Thank You Section -->
-    <section id="thank-you" class="">
+    <section id="thank-you" class="hide">
+      <h1>Thanks for logging your visit!</h1>
 
     </section>
 

@@ -36,6 +36,7 @@ Web Colors:
   --font-color: white;
   --bg-color: #222;
   --highlight-color: #FF17C6;
+  --form-requred: rgb(223, 179, 255);
 }
 
 body {
@@ -191,7 +192,7 @@ header .fa-solid {
 /* ------------  Nav  ------------ */
 
 
-nav #home:hover, nav #streaming:hover, nav #videos:hover, nav #community:hover, nav #branding:hover, nav #toggle:hover { /* Removes hover property for the current page */
+nav #home:hover, nav #streaming:hover, nav #videos:hover, nav #community:hover, nav #branding:hover, nav #toggle:hover, #visitor-log:hover { /* Removes hover property for the current page */
   color: var(--highlight-color);
   cursor: pointer;
   background-color: white;
@@ -235,10 +236,88 @@ main #thumbnails img {
   max-width: 100%;
   height: auto;
 }
-/* main #communityContent iframe {
-  padding: 1rem;
-} */
 
+/* Form CSS */
+main #visitor-form {
+  display: flex;
+  flex-direction: column;
+}
+main #form-div, main #form-div2, main #form-div3 {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+}
+main #message{
+  display: flex;
+  order: 5;
+}
+main #message > texarea {
+  flex: 1;
+  min-width: 10rem;
+  width: 100%;
+}
+main #basic {
+  order: 1;
+  margin: 1rem;
+  flex: 1;
+}
+main #contact {
+  flex: 1;
+  margin: 1rem;
+  order: 2;
+}
+main #discover {
+  flex: 1;
+  margin: 1rem;
+  order: 3;
+}
+main #comments {
+  flex: 1;
+  margin: 1rem;
+  order: 4;
+}
+main #submit {
+  order: 6;
+  width: 6rem;
+}
+main #form-div3 {
+  justify-content: center;
+  height: 3rem;
+}
+main #visitor-form {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+main #visitor-form fieldset {
+  border: 3px var(--highlight-color) double;
+}
+main #visitor-form legend {
+  font-size: 0.8rem;
+}
+main #visitor-form label {
+  margin: .5rem;
+}
+#visitor-form label,  #visitor-form [type=text], #visitor-form [type=number], #visitor-form [type=email], #visitor-form [type=tel], #visitor-form textarea {
+  display: block;
+}
+#visitor-form [type=text], #visitor-form [type=number], #visitor-form [type=email], #visitor-form [type=tel], #visitor-form textarea {
+  font-family: "Roboto", sans-serif;
+  border: solid var(--purple-color) 1px;
+  border-radius: 0.25rem;
+  padding: 0.5vw;
+  width: 300px;
+  font-weight: 300;
+}
+#visitor-form textarea {
+  height: 8rem;
+  width: 317px;
+  flex: 1;
+}
+#visitor-form :required {
+  background-color: var(--form-requred);
+}
 /* ------------  Footer  ------------ */
 footer {
   /* Grid Things */
