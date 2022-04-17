@@ -29,6 +29,7 @@ function initValidation(formName) {
 
     validateForm();
 
+    console.log(formEl.checkValidity());
     if (!formEl.checkValidity()){
       $(":input").addClass("was-validated")
     }
@@ -36,7 +37,7 @@ function initValidation(formName) {
       //TODO
       // $form.();
       //hide form
-      $('log-visit').hide();
+      $('#log-visit').hide();
       $("#thank-you").show();
       //show thank you message
     }
@@ -51,7 +52,12 @@ function validateForm() {
   
   /*note, to validate the group, just passing in id of one of them ("#newspaper"), we will use groupName to check status of group.  Just call setElementValidity on the '#newspaper' element to show the error message*/
  
-  validateCheckboxGroup("#grader", "discover", "you must select at least one!");
+  if (validateCheckboxGroup("#grader", "discover", "You must select at least one!")) {
+    $(".errorMsg").hide();
+  } else {
+    $(".errorMsg").show();
+    $(".errorMsg").text("You must select at least one!");
+  }
   
 }
 function validateState(id, msg){
@@ -61,8 +67,6 @@ function validateState(id, msg){
   $el.val($el.val().toUpperCase());
   //check whether the value is in the stateAbbreviations array
   for (let i = 0; i < stateAbbreviations.length; i++) {
-    console.log(`valid state is: ${valid}\n`);
-    console.log(`${$el.val()} vs ${stateAbbreviations[i]}`);
     if (stateAbbreviations[i] == $el.val()) {
       valid = true;
     }
@@ -89,28 +93,26 @@ function validateCheckboxGroup(fieldName, groupName, message) {
 function setElementValidity(fieldName, valid, message){
   let $field=$(fieldName);
   let el = $field.get(0);
+  console.log(el);
+  console.log(valid);
   if (valid) {  //it has a value
-
     el.setCustomValidity('');  //sets to no error message and field is valid
+
   } else {
 
     el.setCustomValidity(message);   //sets error message and field gets 'invalid' stat
+    // el.reportValidity();
    
   }
   //TODO  insert or remove message in error div for element
-  if (!el.validity()) {
+  if (!el.checkValidity()) {
     // It's good to go!
-    $("#errorMsg").hide();
     console.log("tis valid");
   } else {
     // It's invalid
-    $("#errorMsg").show();
-    $("#errorMsg").text(message);
+    el.reportValidity();
     console.log("tis invalid");
   }
-  
-
-
 
 
 }

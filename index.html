@@ -128,25 +128,17 @@ I personally super enjoyed this project. I loved getting more comfortable with C
         <fieldset id="basic"> <!-- Basic Info -->
           <legend>Basic User Information</legend>
             <label for="first-name">First Name<input id="first-name" type="text" name="fname" minlength="4" required></label>
-            <div class="errorMsg"></div>
             <label for="last-name">Last Name<input id="last-name" type="text" name="lname"></label>
-            <div class="errorMsg"></div>
             <label for="address">Address<input id="addres" type="text" name="address"></label>
-            <div class="errorMsg"></div>
             <label for="city">City<input id="city" type="text" name="city"></label>
-            <div class="errorMsg"></div>
-            <label for="state">State<input id="state" type="text" name="state"></label>
-            <div class="errorMsg"></div>
-            <label for="zip">Zip<input id="zip" type="number" name="zip" pattern="/[0-9]{3}-*[0-9]{3}-*[0-9]{4}/"></label>
-            <div class="errorMsg"></div>
+            <label for="state">State<input id="state" type="text" name="state" required></label>
+            <label for="zip">Zip<input id="zip" type="number" name="zip" pattern="/[0-9]{5}/"></label>
           </fieldset>
 
         <fieldset id="contact"> <!-- Contact Info -->
           <legend>Contact Information</legend>
-            <label for="phone">Phone<input id="phone" type="tel" name="phone" placeholder="000-123-4567"></label>
-            <div class="errorMsg"></div>
-            <label for="email">Email<input id="email" type="email" name="email"></label>
-            <div class="errorMsg"></div>
+            <label for="phone">Phone<input id="phone" type="tel" name="phone" placeholder="000-123-4567" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}"></label>
+            <label for="email">Email<input id="email" type="email" name="email" placeholder="email@website.domain" pattern="\w+@\w+\.\w+" required></label>
           </fieldset>
         </div>
 
